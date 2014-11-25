@@ -3,8 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.zss</groupId>
 	<artifactId>zssjsfdemo</artifactId>
-	<version>3.6.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<properties>
+		<zss.version>3.6.0-Eval</zss.version>
 		<jsf-api.version>2.1.7</jsf-api.version>
 		<jstl-api.version>1.2</jstl-api.version>
 		<commons-io>1.3.1</commons-io>
@@ -55,12 +56,12 @@
 		<dependency>
 			<groupId>org.zkoss.zss</groupId>
 			<artifactId>zssex</artifactId>
-			<version>${project.version}</version>
+			<version>${zss.version}</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.zkoss.zss</groupId>
 		    <artifactId>zssjsf</artifactId>
-		    <version>${project.version}</version>
+		    <version>${zss.version}</version>
 		</dependency>
 		<!-- JSF -->
 		
@@ -94,6 +95,7 @@
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.10</version>
 				<configuration>
+					<webAppSourceDirectory>WebContent</webAppSourceDirectory>
 					<scanIntervalSeconds>5</scanIntervalSeconds>
 					<stopKey>foo</stopKey>
 					<stopPort>9999</stopPort>
